@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.glauter.dsvendas.dto.SellerDTO;
-import com.glauter.dsvendas.entities.Seller;
+import com.glauter.dsvendas.entity.SellerEntity;
 import com.glauter.dsvendas.repositories.SellerRepository;
 
 @Service
@@ -17,7 +17,7 @@ public class SellerService {
 	private SellerRepository sellerRepository;
 	
 	public List<SellerDTO> findAll() {
-		List<Seller> result = sellerRepository.findAll();
+		List<SellerEntity> result = sellerRepository.findAll();
 		return result.stream().map(x -> new SellerDTO(x)).collect(Collectors.toList());
 	}
 }

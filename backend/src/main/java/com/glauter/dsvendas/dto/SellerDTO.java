@@ -1,25 +1,28 @@
 package com.glauter.dsvendas.dto;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
-import com.glauter.dsvendas.entities.Sale;
-import com.glauter.dsvendas.entities.Seller;
+import com.glauter.dsvendas.entity.SellerEntity;
+
 
 public class SellerDTO implements Serializable {
-
+	
 	private static final long serialVersionUID = 1L;
+
 	private Long id;
 	private String name;
+
+	public SellerDTO() {
+		super();
+	}
 	
 	public SellerDTO(Long id, String name) {
 		this.id = id;
 		this.name = name;
 	}
 	
-	public SellerDTO(Seller entity) {
-		id = entity.getId(); 
+	public SellerDTO(SellerEntity entity) {
+		id = entity.getId();
 		name = entity.getName();
 	}
 
@@ -34,9 +37,8 @@ public class SellerDTO implements Serializable {
 	public String getName() {
 		return name;
 	}
-
 	public void setName(String name) {
 		this.name = name;
-	}
-	
+	} 
+
 }
