@@ -1,4 +1,4 @@
-package entities;
+package com.glauter.dsvendas.entities;
 
 import java.util.Date;
 
